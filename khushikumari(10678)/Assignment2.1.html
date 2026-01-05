@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Profile Card</title>
+
+<style>
+    /* Element Selector */
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #6a00ff, #9d4edd);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Class Selector */
+    .card {
+        width: 320px;
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        text-align: center;
+        position: relative; /* relative */
+        transition: 0.3s;
+    }
+
+    /* Hover transition */
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+    /* Absolute positioned badge */
+    .tag {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background: #ff0080;
+        padding: 8px 12px;
+        color: white;
+        font-size: 14px;
+        border-radius: 50px;
+    }
+
+    /* ID selector */
+    #profile-img {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid #9d4edd;
+    }
+
+    /* Button styling + pseudo classes */
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 15px;
+        background: #6a00ff;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+        text-decoration: none;
+    }
+
+    .btn:hover {
+        background: #9d4edd;
+        transform: translateY(-3px);
+    }
+
+    .btn:active {
+        transform: scale(0.95);
+    }
+
+    input:focus {
+        border: 2px solid #6a00ff;
+        outline: none;
+    }
+</style>
+
+</head>
+<body>
+<div class="card">
+    <div class="tag">PRO</div>
+
+    <img id="profile-img" src="meh.jpeg" alt="Profile">
+
+    <h2>Khushi Kumari</h2>
+    <p>Web Developer | CSE (Data Science)</p>
+
+    <input type="text" placeholder="Message me..." style="padding:10px;border-radius:8px;border:1px solid #ccc;width:90%;">
+    
+    <br>
+    <a href="#" class="btn">Follow</a>
+</div>
+
+</body>
+</html>

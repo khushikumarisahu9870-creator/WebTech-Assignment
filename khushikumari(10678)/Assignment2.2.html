@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Responsive Layout</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial;
+    }
+
+    header {
+        background: #6a00ff;
+        padding: 20px;
+        text-align: center;
+        color: white;
+        font-size: 24px;
+    }
+
+    /* Container using flexbox for large screens */
+    .container {
+        display: flex;
+        min-height: 90vh;
+    }
+
+    .sidebar {
+        width: 25%;
+        background: #e0b3ff;
+        padding: 20px;
+    }
+
+    .content {
+        flex: 1;
+        background: #f5e6ff;
+        padding: 20px;
+    }
+
+    /* FLOAT layout for medium screens */
+    @media (max-width: 900px) and (min-width: 600px) {
+        .sidebar {
+            width: 30%;
+            float: left;
+        }
+        .content {
+            width: 70%;
+            float: left;
+        }
+        .clearfix {
+            clear: both;
+        }
+    }
+
+    /* Mobile layout <600px */
+    @media (max-width: 600px) {
+        .container {
+            display: block;
+        }
+        .sidebar, .content {
+            width: 100%;
+        }
+    }
+</style>
+
+</head>
+<body>
+
+<header>
+    Responsive Webpage Layout
+</header>
+
+<div class="container">
+
+    <div class="sidebar">
+        <h2>Sidebar</h2>
+        <p>Links, menu items…</p>
+    </div>
+
+    <div class="content">
+        <h2>Content Area</h2>
+        <p>Main text goes here…</p>
+    </div>
+
+</div>
+
+<div class="clearfix"></div>
+
+</body>
+</html>
